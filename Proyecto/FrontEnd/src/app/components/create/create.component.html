@@ -1,0 +1,51 @@
+<div class="container" *ngIf="producto">
+    <h2 id="tituloCrear">{{title}}</h2>
+      <div class="message success" *ngIf="status=='success'">
+        El producto se ha creado correctamente, puedes verlo <a [routerLink]="['/producto',saveProducto._id]">aquí</a>.
+      </div>
+      <div class="message failed" *ngIf="status=='failed'">
+        El producto no se ha podido crear.
+      </div>
+      <form #productoForm="ngForm" (ngSubmit)="onSubmit(productoForm)">
+        <p>
+          <label for="name" class="labels">Nombre</label>
+          <input type="text" name="name" #name="ngModel" [(ngModel)]="producto.name" required/>
+          <span class="form_error" *ngIf="name.touched && !name.valid">
+            El nombre el obligatorio
+          </span>
+        </p>
+        <p>
+          <label for="description" class="labels">Descripción</label>
+          <textarea name="description" #description="ngModel" [(ngModel)]="producto.description" required>
+          </textarea>
+          <span class="form_error" *ngIf="description.touched && !description.valid">
+            La descripción es obligatoria
+          </span>
+        </p>
+        <p>
+          <label for="category" class="labels">Categoría</label>
+          <input type="text" name="category" #category="ngModel" [(ngModel)]="producto.category" required/>
+          <span class="form_error" *ngIf="category.touched && !category.valid">
+            La categoría es obligatoria
+          </span>
+        </p>
+        <p>
+          <label for="price" class="labels">Precio</label>
+          <input type="text" name="precio" #precio="ngModel" [(ngModel)]="producto.precio" required/>
+          <span class="form_error" *ngIf="precio.touched && !precio.valid">
+            El precio es obligatorio
+          </span>
+        </p>
+        <p>
+          <label for="image" class="labels">Imagen del proyecto</label>
+          <span class="image" *ngIf="producto.image" style="float:none;">
+                    <img src="{{url+'get-image/'+producto.image}}" style="width:100px;"/>
+                </span><br/>
+          <input  type="file" class="form-control" placeholder="Subir imagen" (change)="fileChangeEvent($event)"/>
+        </p>
+        
+    
+        <input type="submit" value="Enviar" [disabled]="!productoForm.form.valid"/>
+      </form>
+    </div>
+    

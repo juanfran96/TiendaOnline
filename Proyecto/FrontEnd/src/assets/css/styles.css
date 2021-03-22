@@ -1,0 +1,308 @@
+/*Generales*/
+
+/*todos los elementos*/
+
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+#menu{
+    background-color: rgb(31, 136, 92);
+    color: azure;
+    
+}
+
+/*barra de navegacion/header*/
+/*
+header {
+    display: block;
+    width: 100%;
+    height: 90px;
+    background: rgba(125, 201, 159, 0.8);
+    color: white;
+    position: fixed;
+    text-transform: uppercase;
+    clear: both;
+    z-index: 30;
+}
+
+header ul {
+    display: block;
+    width: 63%;
+    height: inherit;
+    margin: 0px auto;
+    margin-top: -3px;
+}
+
+header ul li {
+    display: inline-block;
+    margin: 0px auto;
+    text-align: center;
+    line-height: 88px;
+}
+
+header a {
+    display: block;
+    padding-right: 20px;
+    padding-left: 20px;
+    height: inherit;
+    text-decoration: none;
+    color: white;
+    transition: all 300ms;
+}
+
+header a:hover, .actived {
+    background: rgba(17, 70, 49, 0.8);
+    color: white;
+    text-decoration: none;
+}
+*/
+/*contenedor principal*/
+
+#content {
+    min-height: 1050px;
+    height: auto;
+    width: 80%;
+    margin: 0px auto;
+    box-shadow: 0px 0px 40px rgb(31, 136, 92);
+    border-left: 1px solid #b7b7b7;
+    border-right: 1px solid #b7b7b7;
+    border-top: 5px;
+    background: rgba(255, 255, 255, 0.7);
+    padding-top: 60  px;
+}
+
+/*footer*/
+
+footer {
+    width: 75%;
+    margin: 0px auto;
+    padding-top: 15px;
+    color: rgba(0, 0, 0, 0.5);
+}
+
+/*seccion con formulario*/
+
+.container {
+    padding: 50px;
+    padding-top: 10px;
+}
+
+.container .image {
+    float: left;
+    width: 49%;
+}
+
+.container .image img {
+    width: 100%;
+}
+
+.container .data {
+    float: left;
+    width: 47%;
+    margin-left: 30px;
+}
+
+
+#datos h1{
+    font-weight: bold;
+    color: rgb(17, 70, 49, 0.8);
+    font-size: 250%;
+}
+
+#datos h3{
+    font-weight: bold;
+    font-style: italic;
+    font-size: 150%;
+    text-align: justify;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    padding-right: 30px;
+
+}
+
+#categoriaProd{
+    font-weight: lighter;
+    font-size: 150%;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+#precioProd{
+    font-weight: bold;
+    color: rgb(17, 70, 49, 0.8);
+    font-size: 250%;    
+}
+
+.container h2 {
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+}
+
+form {
+    width: 80%;
+}
+
+form label {
+    display: block;
+    width: 100%;
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+
+form input[type="text"], form input[type="number"], form input[type="email"], form textarea {
+    width: 40%;
+    padding: 5px;
+}
+
+form button, form input[type="submit"], .button-edit, .button-delete {
+    display: block;
+    font-size: 17px;
+    padding: 10px;
+    margin-top: 15px;
+    color: white;
+    background: rgb(24, 136, 62);
+    border: 1px solid rgb(13, 82, 19);
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.button-edit, .button-delete {
+    width: 30%;
+    text-align: center;
+    float: left;
+    margin-right: 10px;
+    text-decoration: none;
+}
+
+.button-edit {
+    background: rgba(13, 204, 86, 0.8)e;
+    border: none;
+    text-decoration: none;
+}
+
+.button-delete {
+    background: rgb(11, 146, 72);
+    border: none;
+    text-decoration: none;
+}
+
+form button:hover, form input[type="submit"]:hover {
+    background: rgba(26, 95, 60, 0.8);
+    border: rgb(13, 82, 44);
+}
+
+form input[disabled] {
+    opacity: 0.4;
+    cursor: not-allowed;
+}
+
+.form_error {
+    font-size: 13px;
+    padding: 3px;
+    background: red;
+    color: white;
+    margin-left: 5px;
+}
+
+.message {
+    width: 50%;
+    padding: 5px;
+    border: 1px solid #eee;
+}
+
+.success {
+    background: green;
+    color: white;
+}
+
+.message a {
+    color: white;
+}
+
+.failed {
+    background: red;
+    color: white;
+}
+
+/*pagina de proyectos*/
+
+.producto {
+    list-style: none;
+    display: block;
+    float: left;
+    width: 28%;
+    text-align: center;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-bottom: 30px;
+    
+    
+}
+
+#lista h3{
+    font-size: 150%;
+    text-align: center;
+}
+
+#productoNombre{
+    padding-left: 50px;
+    font-weight: bold;
+    color: rgb(17, 70, 49, 0.8);
+    font-size: 150%;
+    text-align: center;
+}
+
+.producto .image {
+    width: 100%;
+    height: 150px;
+    overflow: hidden;
+}
+
+.producto img {
+    width: 100%;
+}
+
+.producto a {
+    text-decoration: none;
+    color: black;
+}
+
+#descripcionPro{
+    font-size: 100%;
+    text-align: justify;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-style: italic;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+#precioPro{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 300%;
+    color: rgb(17, 70, 49, 0.8);
+    font-weight: bold;
+}
+
+.confirm {
+    display: block;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+#tituloCrear{
+    text-align: center;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: bold;
+    color: rgb(17, 70, 49, 0.8);
+    font-size: 300%;
+    padding-top: 10px;
+}
+
+.labels{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: bold;
+    color: rgb(17, 70, 49, 0.8);
+    font-size: 200%;
+    padding-top: 10px;
+}

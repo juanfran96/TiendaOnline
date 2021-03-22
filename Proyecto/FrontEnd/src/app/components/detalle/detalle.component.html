@@ -1,0 +1,21 @@
+<div class="container" *ngIf="producto">
+    <br>
+    <div class="image" *ngIf="producto.image">
+        <img src="{{url+'get-image/'+producto.image}}" *ngIf="producto.image"/>
+    </div>
+    <div class="data" id="datos">
+        <h1 >{{producto.name}}</h1>
+        <h3>{{producto.description}}</h3>
+        <p id="categoriaProd">{{producto.category}}</p>
+        <p id="precioProd">{{producto.precio}}</p>
+        <p *ngIf="confirm==false">
+            <a [routerLink]="['/editar-producto',producto._id]" class="button-edit">Editar</a>
+            <a (click)="setConfirm(true)" class="button-delete">Borrar</a>
+        </p>
+        <p *ngIf="confirm==true">
+            <span class="confirm">Estas seguro de eliminar el producto?</span><br/>
+            <a (click)="setConfirm(false)" class="button-edit">Cancelar</a>
+            <a (click)="deleteProducto(producto._id)" class="button-delete">Eliminar definitivamente</a>
+        </p>
+    </div>
+</div>

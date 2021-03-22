@@ -1,0 +1,23 @@
+<div class="container">
+    <br>
+         
+        <h2 style="text-align: center; font-size: 300%; color: rgb(17, 70, 49, 0.8);">Productos</h2>
+        <ul>
+            <li *ngFor="let producto of productos" class="producto" id="lista">
+                <h3>{{producto.category}}</h3>
+    
+                <a [routerLink]="['/producto',producto._id]">
+                    <p id="productoNombre">{{producto.name}}</p>
+                    <div class="image">
+                        <img src="{{url+'get-image/'+producto.image}}" *ngIf="producto.image" />
+                    </div>
+    
+    
+                </a>
+                <p id="descripcionPro">{{producto.description}}</p>
+                <p id="precioPro">{{producto.precio}}</p>
+            </li>
+        </ul>
+    </div>
+    <br>
+    <br><br>
